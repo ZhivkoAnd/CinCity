@@ -1,25 +1,35 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import MovieList from './components/MovieList'
+import { BrowserRouter, Switch, Route } from 'react-router-dom';
+import Watchlist from './components/Watchlist';
+import Login from './components/ui/Login'
+import Signup from './components/ui/Signup'
+import PrivateRoute from './components/PrivateRoute'
+
+
 
 function App() {
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+    <BrowserRouter>
+    <Switch>
+    <Route exact path = '/' component = {MovieList}></Route>
+    {/* <Route exact path = '/action' component = {MovieList}></Route> */}
+    <PrivateRoute exact path = '/watchlist' component = {Watchlist}></PrivateRoute>
+    <Route exact path = '/login' component = {Login}></Route>
+    <Route exact path = '/signup' component = {Signup}></Route>
+    </Switch>
+    </BrowserRouter>
+
+    {/* <Route
+  path='/dashboard'
+  render={(props) => (
+    <Dashboard {...props} isAuthed={true} />
+  )}
+/> */}
+    </>
   );
 }
 

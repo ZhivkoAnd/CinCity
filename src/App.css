@@ -1,38 +1,190 @@
-.App {
-  text-align: center;
+html,body {
+  background: #000 url('img/MoviePoster3.jpg') no-repeat fixed;
+  background-size: cover;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.container {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  flex-wrap: wrap;
+  max-width: 1205px;
+  margin:auto;
+  font-family: 'Roboto', sans-serif;
+}
+
+.movielist {
+  background-color:#121212;
+  margin-top:100px;
+  margin-bottom:50px;
+  border-radius: 5px;
+}
+
+.navbar {
+  background:#121212;
+  color:white;
+  padding:0.5rem 1rem;
+}
+
+.navbar-nav {
+  display: flex;
+  justify-content: space-between;
+  Flex:1;
+}
+
+.menuitems {
+  display:flex;
+}
+.navbar-expand-lg .navbar-collapse {
+  justify-content: space-evenly;
+}
+
+.navbar-light .navbar-nav .nav-link:focus, .navbar-light .navbar-nav .nav-link {
+  color:white;
+  -webkit-transition: all 0.15s ease-in-out;
+  transition: all 0.15s ease-in-out;
+}
+
+.navbar-light .navbar-nav .nav-link:focus, .navbar-light .navbar-nav .nav-link:hover {
+  color:white;
+  background-color:rgba(255,255,255,0.08);
+  border-radius: 5px;
+}
+
+.logo {
+  width:85px;
+}
+
+.ml-3, .mx-3 {
+  margin-left: 0.6rem!important;
+}
+
+
+.formwrap {
+  background-color: #121212;
+  color:white;
+  border-radius: 10px;
+}
+
+.MuiInputBase-root {
+  background-color:white;
+}
+
+/* .MuiFormLabel-root.Mui-focused {
+  color:grey!important;
+} */
+
+.pagination {
+  margin-top:15px;
+  padding:15px;
+}
+.page-link {
   color: white;
+  background-color:rgba(255,255,255,0.08);
+  border:none;
+  -webkit-transition: all 0.15s ease-in-out;
+  transition: all 0.15s ease-in-out;
 }
 
-.App-link {
-  color: #61dafb;
+.page-link:hover {
+  color: #121212;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.page-item.active .page-link {
+  background-color: #f5c518;
+  border:#121212;
+  color:#121212;
+}
+
+.page-link:focus {
+  box-shadow: 0 0 0 0.1rem rgba(255, 255, 255, 0.11);;
+}
+
+.dropdown-menu {
+  background-color:#1F1F1F;
+}
+.dropdown-item {
+  color:white;
+}
+.dropdown-item:hover {
+  background-color:#f5c518;
+  color:#1F1F1F;
+  font-weight: bold;
+}
+.dropdown-item.active, .dropdown-item:active {
+  background-color:white;
+  color:#1F1F1F;
+}
+
+.dropdown-toggle::after {
+  color: #f5c518;
+}
+
+.dropdown-col {
+  width: 50%;
+  display: inline-block;
+}
+
+.MuiContainer-root {
+  padding :0!important;
+}
+
+.MuiButton-containedPrimary {
+  margin-top:30px;
+}
+
+.modal-title {
+  font-family: 'Roboto';
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.modal-header {
+  background-color:#e6e6e6;
+}
+
+.modal-footer {
+
+  padding-top: 0.30rem;
+  padding-bottom: 0.30rem;
+  padding-right: .75rem;
+  padding-left: .75rem;
+}
+
+.btn.btn-secondary {
+  color:black;
+  font-weight: bold;
+  background-color:#f5c518;
+}
+
+
+
+.table td, .table th {
+    padding: .75rem;
+    padding-top: 0.20rem;
+    padding-bottom: 0.20rem;
+    border:none;
+    color:white
   }
-  to {
-    transform: rotate(360deg);
-  }
+
+
+@media (min-width: 576px) {
+  .modal-dialog {
+  
+  margin: 10rem auto; 
+  
+}
+} 
+
+@media (min-width: 992px) {
+  .genresmenu .dropdown-menu {
+    position: absolute;
+    width:20em;
+}
+}
+
+
+@media (max-width: 991px) {
+ .menuitems {
+   flex-direction: column;
+ }
 }
